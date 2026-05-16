@@ -1,48 +1,56 @@
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
-    background-color: #ffffff;
-    margin: 0;
-    padding: 20px;
-  }
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  background-color: #ffffff;
+  margin: 0;       /* ページ余白をゼロに */
+  padding: 0;      /* ページ内余白もゼロに */
+}
 
-  .finder {
-    display: flex;
-    gap: 1px;
-    border: 1px solid #ccc;
-    background-color: #d4ffee;
-    width: fit-content;
-    height: 90vh;
-    overflow-x: auto;
-  }
+.finder {
+  display: flex;
+  gap: 1px;
+  border: 1px solid #ccc;
+  background-color: #d4ffee;
+  width: 100%;
+  height: 90vh;
+  overflow-x: auto;
+}
 
-  .column {
-    width: 200px;
-    background-color: linear-gradient(#ffffff,#cdf5fb);
-    border-right: 1px solid #ccc;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    overflow-y: auto; 
-  }
+/* ④ カラム幅を1/3にして */
+.column {
+  flex: 1 0 33.33%;
+  background: linear-gradient(#ffffff, #cdf5fb);
+  border-right: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+  font-size: 8px; /* ①文字サイズを小さく */
+}
 
-  .column-header {
-    padding: 6px 8px;
-    font-size: 12px;
-    color: #555;
-    background: linear-gradient(#f9f9f9, #e5e5e5);
-    border-bottom: 1px solid #ccc;
-  }
+/* ③ スクロールしてもヘッダ固定 */
+.column-header {
+  position: sticky;
+  top: 0;
+  padding: 6px 8px;
+  font-size: 12px;
+  color: #333;
+  background: linear-gradient(#f9f9f9, #e5e5e5);
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 少し浮かせて見やすく */
+}
 
-  .item {
-    padding: 6px 10px;
-    cursor: pointer;
-  }
+.item {
+  padding: 6px 10px;
+  cursor: pointer;
+}
 
-  .item:hover {
-    background-color: #95ddff;
-  }
+.item:hover {
+  background-color: #95ddff;
+}
 
-  .selected {
-    background-color: #ffffff;
-    color: #000000;
-  }
+.selected {
+  background-color: #ffffff;
+  color: #000000;
+}

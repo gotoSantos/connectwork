@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:type="TaskPaneApp">
+  <Id>f3b2c0a1-1234-4567-89ab-abcdef123456</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Tetsu</ProviderName>
+  <DefaultLocale>ja-JP</DefaultLocale>
+
+  <DisplayName DefaultValue="LinkFinder" />
+  <Description DefaultValue="同じパスの LinkFinder.html を表示するアドイン" />
+
+  <Hosts>
+    <Host Name="Workbook" />
+  </Hosts>
+
+  <DefaultSettings>
+    <SourceLocation DefaultValue="http://127.0.0.1:3000/c:/Users/gotoo/OneDrive/dev/web_app/LinkFinder/LinkFinder.html?vscode-livepreview=true" />
+  </DefaultSettings>
+
+  <Permissions>ReadWriteDocument</Permissions>
+</OfficeApp>
