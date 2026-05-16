@@ -54,3 +54,21 @@ body {
   background-color: #ffffff;
   color: #000000;
 }
+
+/* ================================
+   画面幅が狭いときの Excel 緑マスク
+   ================================ */
+#excelMask {
+  position: fixed;
+  inset: 0;
+  background: #10793F; /* Excel グリーン */
+  z-index: 999999;     /* 全要素の最前面 */
+  display: none;       /* 初期は非表示 */
+}
+
+/* 画面幅が 800px 未満になったらマスク表示 */
+@media (max-width: 150px) {
+  #excelMask {
+    display: block;
+  }
+}
